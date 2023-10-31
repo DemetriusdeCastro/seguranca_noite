@@ -1,12 +1,15 @@
 <?php
 
 include('conexao.php');
+include('funcoes.php');
 
 $login = isset($_POST['login']) ? $_POST['login'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
 
+$senhacriptografada = criptografar($senha);
+
 $select = "SELECT login, senha, nivel FROM login 
-			WHERE login = '$login' AND senha = '$senha'";
+			WHERE login = '$login' AND senha = '$senhacriptografada'";
 $query = mysqli_query($conexao, $select);
 $dados = mysqli_fetch_row($query);
 
