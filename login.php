@@ -13,7 +13,7 @@ $select = "SELECT login, senha, nivel FROM login
 $query = mysqli_query($conexao, $select);
 $dados = mysqli_fetch_row($query);
 
-if (isset($dados[0]) == $login && isset($dados[1]) == $senha) {
+if (isset($dados[0]) == $login && isset($dados[1]) == $senhacriptografada) {
 	session_start();
 	$_SESSION['login'] = $dados[0];
 	$_SESSION['nivel'] = $dados[2];
