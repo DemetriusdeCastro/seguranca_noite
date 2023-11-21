@@ -1,7 +1,5 @@
 <?php
 
-include('validalogin.php');
-
 session_start();
 
 $_SESSION['logado'] = false;
