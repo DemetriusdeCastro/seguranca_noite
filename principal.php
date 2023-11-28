@@ -27,6 +27,7 @@ $nivel = $_SESSION['nivel'];
 		<?php } ?> | 
 		<a href="alterardados.php">Alterar Dados</a>
 		<br>
+		<a href="pesquisarcnpj.php">Pesquisar CNPJ</a><br>
 		<a href="logout.php">Sair</a>
 	</center>
 </body>
